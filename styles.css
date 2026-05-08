@@ -55,6 +55,13 @@ h1 {
   line-height: 1.6;
 }
 
+.note {
+  max-width: 680px;
+  margin-top: 18px;
+  color: var(--gold);
+  font-weight: 700;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -63,7 +70,9 @@ h1 {
 }
 
 article,
-.manifesto {
+.manifesto,
+.bio,
+.split > div {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -81,8 +90,21 @@ p {
   line-height: 1.65;
 }
 
+.bio,
 .manifesto {
   margin-top: 8px;
+}
+
+.bio {
+  display: grid;
+  gap: 12px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
 }
 
 ol {
@@ -112,5 +134,8 @@ footer p {
   .grid {
     grid-template-columns: 1fr;
   }
-}
 
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
