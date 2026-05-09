@@ -140,6 +140,15 @@ p {
   line-height: 1.65;
 }
 
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .bio,
 .manifesto {
   margin-top: 8px;
