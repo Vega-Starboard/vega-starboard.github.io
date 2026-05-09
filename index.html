@@ -55,25 +55,79 @@
       </section>
 
       <section class="bio">
-        <h2>Current Artifacts</h2>
+        <h2>Artifact Index</h2>
         <p>
-          <a href="https://github.com/Vega-Starboard/vega-endpoint-collector">Vega Endpoint Collector</a>
-          is a Firefox-first WebExtension for authorized security review. It
-          maps active-tab endpoint URLs locally, redacts query values, and does
-          not upload telemetry.
+          Three public browser-security artifacts are live. Each one is scoped
+          for lawful review, local-first evidence, and a narrow permission
+          boundary.
         </p>
-        <p>
-          <a href="https://github.com/Vega-Starboard/vega-security-header-lens">Vega Security Header Lens</a>
-          is a read-only WebExtension for authorized HTTP security header
-          review. It observes response headers for user-granted origins and
-          keeps the analysis local.
-        </p>
-        <p>
-          <a href="https://github.com/Vega-Starboard/vega-dom-comment-scanner">Vega DOM Comment Scanner</a>
-          is a no-grant Tampermonkey userscript for local rendered DOM review:
-          comments, hidden field metadata, suspicious attributes, and
-          internal-looking URLs.
-        </p>
+        <div class="artifact-grid" aria-label="Public artifacts">
+          <article class="artifact">
+            <div class="artifact-topline">
+              <span>Firefox WebExtension</span>
+              <span>v0.1.0</span>
+            </div>
+            <h3>Vega Endpoint Collector</h3>
+            <p>
+              Maps active-tab endpoint URLs, redacts query values, and exports
+              local JSON for authorized review notes.
+            </p>
+            <ul class="tags" aria-label="Endpoint Collector boundaries">
+              <li>active tab</li>
+              <li>no bodies</li>
+              <li>no cookies</li>
+              <li>no telemetry</li>
+            </ul>
+            <div class="artifact-links">
+              <a href="https://github.com/Vega-Starboard/vega-endpoint-collector">Repo</a>
+              <a href="https://github.com/Vega-Starboard/vega-endpoint-collector/releases/tag/v0.1.0">Release</a>
+            </div>
+          </article>
+
+          <article class="artifact">
+            <div class="artifact-topline">
+              <span>Firefox WebExtension</span>
+              <span>v0.1.0</span>
+            </div>
+            <h3>Vega Security Header Lens</h3>
+            <p>
+              Reviews CSP, HSTS, framing, referrer, permissions, CORS, and
+              isolation headers for user-granted origins.
+            </p>
+            <ul class="tags" aria-label="Security Header Lens boundaries">
+              <li>read only</li>
+              <li>optional hosts</li>
+              <li>no blocking</li>
+              <li>no telemetry</li>
+            </ul>
+            <div class="artifact-links">
+              <a href="https://github.com/Vega-Starboard/vega-security-header-lens">Repo</a>
+              <a href="https://github.com/Vega-Starboard/vega-security-header-lens/releases/tag/v0.1.0">Release</a>
+            </div>
+          </article>
+
+          <article class="artifact">
+            <div class="artifact-topline">
+              <span>Tampermonkey Userscript</span>
+              <span>v0.1.0</span>
+            </div>
+            <h3>Vega DOM Comment Scanner</h3>
+            <p>
+              Finds comments, hidden field metadata, suspicious attributes, and
+              internal-looking URLs in the rendered DOM.
+            </p>
+            <ul class="tags" aria-label="DOM Comment Scanner boundaries">
+              <li>@grant none</li>
+              <li>no network</li>
+              <li>no storage reads</li>
+              <li>no telemetry</li>
+            </ul>
+            <div class="artifact-links">
+              <a href="https://github.com/Vega-Starboard/vega-dom-comment-scanner">Repo</a>
+              <a href="https://github.com/Vega-Starboard/vega-dom-comment-scanner/releases/tag/v0.1.0">Release</a>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="bio">
